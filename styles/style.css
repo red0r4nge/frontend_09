@@ -25,3 +25,31 @@ a, a:active {
 ul {
   list-style: none;
 }
+
+.logoheader {
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 3% 11%;
+  color: aliceblue;
+}
+
+.header, .nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__item {
+  padding-right: 28%;
+  font-size: 1.2rem;
+}
+
+.nav__link {
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.nav .nav__item .nav__link:hover {
+  color: rgba(255,255,255,0.5);
+  transition: .3s;
+}
