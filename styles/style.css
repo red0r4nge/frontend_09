@@ -69,3 +69,24 @@ form {
   font-weight: 700;
   padding: 8% 3%;
 }
+
+.select_item {
+	color: #444;
+	padding: 2% 3%;
+	width: 100%;
+  margin: 0 0 5%;
+	border: 1px solid rgba(170, 170, 170, 0.623);
+	border-radius: 10px;
+	background-color: #f9fafc;
+}
+
+.select_item:hover {
+  cursor: pointer;
+}
+.select_item:focus {
+  box-shadow: 0px 0px 0px .1rem #3f83f8;
+}
+
+.datepicker {
+  margin: 0 0 5%;
+}
