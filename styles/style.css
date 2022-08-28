@@ -29,7 +29,7 @@ ul {
 .logoheader {
   font-weight: 700;
   font-size: 3rem;
-  padding: 3% 11%;
+  padding: 3% 12%;
   color: aliceblue;
 }
 
@@ -40,16 +40,27 @@ ul {
 }
 
 .nav__item {
-  padding-right: 28%;
+  display: inline-block;
+  position: relative;
+  padding-right: 22%;
   font-size: 1.2rem;
 }
 
-.nav__link {
+.nav__item:hover .nav-dropdown {
+  display: block;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+}
+
+.nav__link, .nav-dropdown__link {
   color: aliceblue;
   font-weight: 700;
 }
 
-.nav .nav__item .nav__link:hover {
+.nav__link:hover, .nav-dropdown__link:hover {
   color: rgba(255,255,255,0.5);
   transition: .3s;
 }
@@ -57,7 +68,7 @@ ul {
 form {
   background-color: aliceblue;
   text-align: center;
-  width: 30%;
+  width: 31%;
   margin: auto;
   padding: 0 3% 2%;
   border-radius: 30px;
@@ -71,7 +82,7 @@ form {
 }
 
 .select_item {
-	color: #444;
+	color: rgba(68, 68, 68, 0.76);
 	padding: 2% 3%;
 	width: 100%;
   margin: 0 0 5%;
@@ -83,6 +94,7 @@ form {
 .select_item:hover {
   cursor: pointer;
 }
+
 .select_item:focus {
   box-shadow: 0px 0px 0px .1rem #3f83f8;
 }
@@ -107,4 +119,43 @@ fieldset .sub_button:hover {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   color: aliceblue;
   background-color: #0080ff;
+}
+
+article {
+  background-color: aliceblue;
+  width: 50%;
+  margin: auto;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 0 3%;
+}
+
+.gradient {
+  width: 50%;
+  margin: auto;
+  background: linear-gradient(to right,#4bc0c8, #c779d0, #feac5e);
+  padding: .5rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.article_header {
+  text-align: center;
+  padding: 3% 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.article_nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_article_header {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #444;
+}
+
+.article_nav, .sub_article_header, .article_image, p {
+  padding-bottom: 3%;
 }
