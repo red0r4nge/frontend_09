@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Країни</title>
+  <title>Німеччина</title>
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
   <style>
@@ -27,6 +27,7 @@
   </header>
   <main>
     <div class="gradient"></div>
+    <button onclick="topFunction()" id="totop" title="Go to top">Нагору</button>
     <article>
       <h2 class="article_header">Німеччина</h2>
       <div class="article_nav">
@@ -45,5 +46,23 @@
       <p>Але перш за все Німеччина – це країна високорозвиненої, передової промисловості. У Рурі вже в давнину добували вугілля. І зараз Німеччина посідає перше місце в світі з видобутку бурого вугілля. Країна займає передові позиції у важкій промисловості і машинобудуванні. Тут виробляються автомобілі “Мерседес”, “Фольксваген”, “Ауді”, БМВ, “Опель”. Видатних успіхів досягла німецька хімічна промисловість. Німці внесли великий вклад в розвиток науки і культури. Імена Гете, Шилера, Бетховена, Рентгена, Планка відомі всьому світу. Адміністративно Німеччина ділиться на шістнадцять земель. Назви деяких з них нагадують про стародавні німецькі племена, що колись населяли ці території. Наприклад, в Саксонії колись жили сакси, в Баварії – бавари, в Тюрінгії – тюринги. Незважаючи на загальне походження німецькі племена далеко не в усьому схожі один на одного. Ці відмінності збереглися і в сучасній Німеччині. У кожної німецької землі своє обличчя, свої національні костюми, свої улюблені страви.</p>
     </article>
   </main>
+  <script> // этот скрипт "Вернуться наверх" я брал с https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+    var mybutton = document.getElementById("totop");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 </html>

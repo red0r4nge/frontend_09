@@ -159,3 +159,21 @@ article {
 .article_nav, .sub_article_header, .article_image, p {
   padding-bottom: 3%;
 }
+
+#totop {
+  display: none;
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  background-color: #444;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#totop:hover {
+  background-color: #555;
+  transition: .3s;
+}
