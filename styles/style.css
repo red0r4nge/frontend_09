@@ -145,18 +145,34 @@ article {
   color: #444;
 }
 
-.article_nav {
-  display: flex;
-  flex-direction: column;
+.article_link {
+  position: relative;
+  display: inline-block;
+  color: #444;
 }
 
-.sub_article_header {
+.article_link:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #444;
+  transition: width .3s ease-in-out;
+}
+
+.article_link:hover:after {
+  width: 100%;
+}
+
+.article_header_child {
   font-size: 1.5rem;
   text-align: center;
   color: #444;
 }
 
-.article_nav, .sub_article_header, .article_image, p {
+.article_nav, .article_header_child, .article_image, p {
   padding-bottom: 3%;
 }
 
