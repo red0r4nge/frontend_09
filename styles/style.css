@@ -4,7 +4,7 @@
   outline: 0;
   border: 0;
   box-sizing: border-box;
-}
+} /*Обнуление стилей*/
 
 body {
   font-size: 1rem;
@@ -12,58 +12,65 @@ body {
   background: linear-gradient(to right, #ec6ead, #3494e6);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-}
+} /*Высота строки, цвет фона странички, шрифт*/
 
 html {
   font-size: 16px;
-}
+} /*Задаём сколько весит 1rem*/
 
 a, a:active {
   text-decoration: none;
-}
+} /*Убираем подчёркивание для ссылок*/
 
 ul {
   list-style: none;
-}
+} /*Убираем подчёркивание для ссылок*/
 
-.logoheader {
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 36%;
+  padding: 4% 8%;
   font-weight: 700;
   font-size: 3rem;
-  padding: 3% 12%;
   color: aliceblue;
-}
+} /*Флексбокс, отступы, ширина, шрифт и цвет для  для лого*/
 
-.header, .nav {
+.header {
   display: flex;
   align-items: center;
   width: 100%;
-}
+} /*Флексбокс, центрирование, ширина для хедера*/
+
+.nav {
+  width: 64%;
+} /*Ширина навбара*/
 
 .nav__item {
   display: inline-block;
   position: relative;
-  padding-right: 22%;
+  padding-right: 26%;
   font-size: 1.2rem;
-}
+} /*Настраиваем меню для того, чтобы выпадала, отступы, размер шрифта*/
 
 .nav__item:hover .nav-dropdown {
   display: block;
-}
+} /*При наведении меню становится видной*/
 
 .nav-dropdown {
   display: none;
   position: absolute;
-}
+} /*Выпадающая менюшка, которую мы прячем*/
 
 .nav__link, .nav-dropdown__link {
   color: aliceblue;
   font-weight: 700;
-}
+} /*Цвет и шрифт для ссылок меню*/
 
 .nav__link:hover, .nav-dropdown__link:hover {
   color: rgba(255,255,255,0.5);
   transition: .3s;
-}
+} /*Цвет и плавный переход для ссылок меню при наведении*/
 
 form {
   background-color: aliceblue;
@@ -73,45 +80,45 @@ form {
   padding: 0 3% 2%;
   border-radius: 30px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
-} 
+} /*Фон, центрирование, ширина, отстутпы, закругление и тени для формы*/
 
 .formheader {
   color: #444;
   font-weight: 700;
   padding: 8% 3%;
-}
+} /*Цвет, шрифт, отступы для заголовка формы*/
 
 .select_item {
 	color: rgba(68, 68, 68, 0.76);
-	padding: 2% 3%;
 	width: 100%;
+	padding: 2% 3%;
   margin: 0 0 5%;
 	border: 1px solid rgba(170, 170, 170, 0.623);
 	border-radius: 10px;
 	background-color: #f9fafc;
-}
+} /*Цвет, отступы, ширина, границы, закругление для кнопки выбора*/
 
 .select_item:hover {
   cursor: pointer;
-}
+} /*При наведении курсор поинтер*/
 
 .select_item:focus {
   box-shadow: 0px 0px 0px .1rem #3f83f8;
-}
+} /*Когда нажал на кнопку выбора, появляется тень вокруг нёё*/
 
 .datepicker {
   margin: 0 0 5%;
-}
+} /*Отступы для выбора даты*/
 
 fieldset .sub_button {
   color: aliceblue;
-	padding: 2% 3%;
 	width: 100%;
+	padding: 2% 3%;
   margin: 0 0 3%;
 	border: 1px solid rgba(170, 170, 170, 0.623);
 	border-radius: 10px;
   background-color: #5ba5fa;
-}
+} /*Цвет, ширина, ширина, граница, закругление, фон для кнопки "Подтвердить"*/
 
 fieldset .sub_button:hover {
   cursor: pointer;
@@ -119,15 +126,15 @@ fieldset .sub_button:hover {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   color: aliceblue;
   background-color: #0080ff;
-}
-
+} /*Курсор понтер, плавный переход, тень, цвет для кнопки "Подтвердить" при наведении*/
+/*Тут уже начинается primary.html*/
 article {
   background-color: aliceblue;
   width: 50%;
   margin: auto;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   padding: 0 3%;
-}
+} /*Цвет фона, ширина, центрование, тень, отступ для статьи*/
 
 .gradient {
   width: 50%;
@@ -135,7 +142,7 @@ article {
   background: linear-gradient(to right,#4bc0c8, #c779d0, #feac5e);
   padding: .5rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
+} /*Ширина, центрирование, фон, отступ, тени для градиента выше статьи*/
 
 .article_header {
   text-align: center;
@@ -143,38 +150,38 @@ article {
   font-size: 2rem;
   font-weight: 700;
   color: #444;
-}
+} /*Центрирование, отступ, шрифт, цвет для заголовка статьи*/
 
 .article_link {
   position: relative;
   display: inline-block;
   color: #444;
-}
+} /*Позиция, инлайн-блок, цвет для ссылки навигации*/
 
 .article_link:after {
   content: "";
   position: absolute;
-  left:0;
+  left: 0;
   top: 100%;
   width: 0;
-  height: 2px;
+  padding: 1px 0;
   background-color: #444;
-  transition: width .3s ease-in-out;
-}
+  transition: .3s ease-in-out;
+} /*Расположение на сайте, отступ, цвет фона, плавный переход*/
 
 .article_link:hover:after {
   width: 100%;
-}
+} /*Ширина линии на весь блок при наведении на ссылку навигации*/
 
 .article_header_child {
   font-size: 1.5rem;
   text-align: center;
   color: #444;
-}
+} /*Шрифт, центрирование, цвет для подзаголовка статьи*/
 
 .article_nav, .article_header_child, .article_image, p {
   padding-bottom: 3%;
-}
+} /*Отступы для этих классов*/
 
 #totop {
   display: none;
@@ -187,9 +194,9 @@ article {
   padding: 1%;
   border-radius: 10px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
+} /*Кнопка "Нагору", фиксед положение в углу, цвет, курсор понитер, отступы, закругление и тени*/
 
 #totop:hover {
   background-color: #555;
   transition: .3s;
-}
+} /*При Наведении на кнопку "Нагору" меняется цвет и плавный переход*/
