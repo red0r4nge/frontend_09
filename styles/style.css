@@ -12,7 +12,8 @@ body {
   background: linear-gradient(to right, #ec6ead, #3494e6);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-} /*Высота строки, цвет фона странички, шрифт*/
+  overflow: hidden;
+} /*Высота строки, цвет фона странички, шрифт, убираем прокрутку*/
 
 html {
   font-size: 16px;
